@@ -30,10 +30,22 @@ describe(`sayHello`, function(){
     it(`should return 'Hello Pat'`, function () {
         expect(sayHello(`Pat`)).toBe(`Hello Pat`);
     });
-    it(`should return 'Hello World'`, function () {
+    it(`should return 'Hello World'`, function (){
         expect(sayHello(`World`)).toBe(`Hello World`);
     });
     it(`should not return undefined`, function (){
         expect(sayHello()).not.toBe(undefined);
+    });
+    it(`should return 'Hello World' when input is true`, function (){
+        expect(sayHello(true)).toBe(`Hello World`);
+    });
+    it('should return `Hello World` when input is false', function (){
+        expect(sayHello(false)).toBe(`Hello World`);
+    });
+    it(`should return 'Hello World' if input is null`, function (){
+        expect(sayHello(null)).toBe(`Hello World`);
+    });
+    it(`should return 'Hello World' if input is a number`, function (){
+        expect(sayHello(2.3)).toBe(`Hello World`);
     });
 });
